@@ -306,6 +306,7 @@ article {
   max-width: 800px;
   margin: 0px auto;
   padding: 20px 0px 150px 0px;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 800px) {
