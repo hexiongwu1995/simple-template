@@ -2,7 +2,6 @@ const root = document.documentElement;
 const article = document.querySelector("article");
 const tocRoot = document.getElementById("toc-root");
 
-
 let headings = [];
 const getLevel = (el) => parseInt(el.tagName[1], 10);
 
@@ -198,11 +197,11 @@ toggleNumbering.addEventListener("click", () => {
 // 点击arrow切换目录展开状态
 const nav = document.querySelector("nav");
 nav.addEventListener("click", (e) => {
-  const arrow = e.target.closest(".icon-arrow2");
-  if (!arrow) return;
-
   e.preventDefault();
   e.stopPropagation();
+
+  const arrow = e.target.closest(".icon-arrow2");
+  if (!arrow) return;
 
   const li = arrow.closest("li");
   const nestedOl = li.querySelector(":scope > ol");
@@ -215,19 +214,31 @@ nav.addEventListener("click", (e) => {
 
 // 展开/收起 所有目录
 const iconExpand = document.querySelector(".icon-expand-all");
-const ol = tocRoot.querySelectorAll("ol");
+
 iconExpand.addEventListener("click", () => {
+  const ol = tocRoot.querySelectorAll("ol");
+  const arrows = tocRoot.querySelectorAll(".icon-arrow2");
   const allExpandedValue = getComputedStyle(root).getPropertyValue("--all-expanded").trim();
   const newAllExpanded = allExpandedValue === "false" ? "true" : "false";
   root.style.setProperty("--all-expanded", newAllExpanded);
-  ol.forEach((item) => {
-    item.classList.toggle("show", newAllExpanded === "true");
-  });
 
-  const arrows = tocRoot.querySelectorAll(".icon-arrow2");
-  arrows.forEach((arrow) => {
-    arrow.classList.toggle("rotate-90", newAllExpanded === "true");
-  });
+  if (newAllExpanded === "true") {
+    ol.forEach((item) => {
+      item.classList.add("show");
+    });
+    arrows.forEach((arrow) => {
+      arrow.classList.add("rotate-90");
+    });
+  } else if (newAllExpanded === "false") {
+    ol.forEach((item) => {
+      item.classList.remove("show");
+    });
+    arrows.forEach((arrow) => {
+      arrow.classList.remove("rotate-90");
+    });
+  } else {
+    alert("展开/收起所有目录失败");
+  }
 });
 
 // 大屏状态下 显示/隐藏 侧边栏

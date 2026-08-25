@@ -1,9 +1,9 @@
-#import "@preview/theoframe:0.3.6":*
+#import "@preview/theoframe:0.3.7":*
 #show: theoframe-setup
 // #show: theoframe-setup.with(theme: (style: "minimal", color: rgb("#067300")))
 
-#set page(paper:"a4",  margin: 1cm)
-// #set heading(numbering: none)
+#set page(paper:"a4",  margin: 2cm)
+// #set heading(numbering: "1.")
 
 = Preliminaries
 
