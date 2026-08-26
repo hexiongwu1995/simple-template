@@ -37,6 +37,8 @@
   --button-padding: 10px;
 }
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -253,12 +255,18 @@ main {
   height: 100vh;
   background-color: var(--main-color);
   overflow-y: auto;
+  overflow-x: hidden;
   transition: width 0.3s ease;
 }
 
 main.hidden {
   width: 100vw;
 }
+
+main.resizing {
+  transition: none;
+}
+
 
 header {
   position: sticky;
@@ -488,4 +496,23 @@ figure {
 .thmplain a {
   color: var(--font-color);
   text-decoration: none;
+}
+
+
+/* MathJax.css */
+
+mjx-container[display="true"] {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Firefox 隐藏滚动条 */
+  -ms-overflow-style: none;
+  /* IE/Edge 旧版本隐藏滚动条 */
+}
+
+mjx-container[display="true"]::-webkit-scrollbar {
+  /*  Chrome、Safari、新版 Edge 隐藏滚动条 */
+  display: none;
 }

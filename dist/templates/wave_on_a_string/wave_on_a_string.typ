@@ -8,7 +8,7 @@
   author: "何雄武",
   date: datetime.today(),
 )
-
+#set heading(numbering: none)
 
 = 真实物理模型
 

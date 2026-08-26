@@ -7,9 +7,16 @@ const getLevel = (el) => parseInt(el.tagName[1], 10);
 
 // 给每个 heading 生成id、添加numbering和data-original-text属性
 function initHeadings() {
-  headings = Array.from(article.querySelectorAll("h1,h2, h3, h4"));
+  headings = Array.from(article.querySelectorAll("h2, h3, h4"));
+
   const counters = [];
+
   if (headings.length > 0) {
+
+    // if (getLevel(headings[0]) > getLevel(headings[1])) {
+    //   alert("初始标题的层级必须小于等于后续标题的层级");
+    // }
+
     headings.forEach((heading) => {
       const level = getLevel(heading);
 
@@ -284,6 +291,7 @@ if (resizeHandle) {
     startWidth = currentWidth;
     resizeHandle.classList.add("resizing");
     aside.classList.add("resizing");
+    main.classList.add("resizing");
     document.body.style.userSelect = "none";
   });
 
@@ -301,6 +309,7 @@ if (resizeHandle) {
     isResizing = false;
     resizeHandle.classList.remove("resizing");
     aside.classList.remove("resizing");
+    main.classList.remove("resizing");
     document.body.style.userSelect = "";
   });
 }
