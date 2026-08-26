@@ -197,11 +197,11 @@ toggleNumbering.addEventListener("click", () => {
 // 点击arrow切换目录展开状态
 const nav = document.querySelector("nav");
 nav.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-
   const arrow = e.target.closest(".icon-arrow2");
   if (!arrow) return;
+
+  e.preventDefault();
+  e.stopPropagation();
 
   const li = arrow.closest("li");
   const nestedOl = li.querySelector(":scope > ol");
