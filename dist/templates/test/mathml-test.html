@@ -4,142 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../../css/style.css"> -->
-    <link rel="stylesheet" href="../../css/mathml.css">
-    <title>Document</title>
+    <title>mathml_test</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_5215219_v2x8fivud1r.css">
+    <script src="../../script/script.js" defer></script>
+    <script src="../../script/mathjax-config.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js" defer></script>
 </head>
 
 <body>
-    <article>
 
-        <p>当 <math>
-                <mi>𝐶</mi>
-                <mo>&lt;</mo>
-                <mn>0</mn>
-            </math>时，对应的微分方程的通解为：<math>
-                <mi>𝑋</mi>
-                <mrow>
-                    <mo>(</mo>
-                    <mi>𝑥</mi>
-                    <mo>)</mo>
-                </mrow>
-                <mo>=</mo>
-                <msub>
-                    <mi>𝐶</mi>
-                    <mn>1</mn>
-                </msub>
-                <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">cos</mo>
-                <mrow>
-                    <mo>(</mo>
-                    <mrow>
-                        <msqrt>
-                            <mo>−</mo>
-                            <mi>𝐶</mi>
-                        </msqrt>
-                        <mi>𝑥</mi>
-                    </mrow>
-                    <mo>)</mo>
-                </mrow>
-                <mo>+</mo>
-                <msub>
-                    <mi>𝐶</mi>
-                    <mn>2</mn>
-                </msub>
-                <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">sin</mo>
-                <mrow>
-                    <mo>(</mo>
-                    <mrow>
-                        <msqrt>
-                            <mo>−</mo>
-                            <mi>𝐶</mi>
-                        </msqrt>
-                        <mi>𝑥</mi>
-                    </mrow>
-                    <mo>)</mo>
-                </mrow>
-            </math></p>
+    <div class="container">
 
+        <aside>
+            <div class="function-panel">
+                <span class="aside-title"> 目录 </span>
+                <span class="iconfont icon-Numbering"></span>
+                <span class="iconfont icon-expand-all"></span>
+            </div>
+            <nav>
+                <ol id="toc-root"></ol>
+            </nav>
 
+            <div id="resize-handle"></div>
+        </aside>
 
+        <div class="overlay"></div>
 
-        <div>
-            <p>总能量</p><math display="block">
-                <mi>𝐸</mi>
-                <mrow>
-                    <mo>(</mo>
-                    <mi>𝑡</mi>
-                    <mo>)</mo>
-                </mrow>
-                <mo>=</mo>
-                <msubsup>
-                    <mo form="prefix" lspace="0em" rspace="0em">∫</mo>
-                    <mn>0</mn>
-                    <msub>
-                        <mi>𝐿</mi>
+        <main>
+            <header>
+
+                <span class="header-left">
+                    <span class="iconfont icon-Aside"></span>
+                    <span class="iconfont icon-menu3"></span>
+                </span>
+
+                <span class="header-middle">
+                    <script>document.write(document.title.split('-')[0])</script>
+                </span>
+
+                <span class="header-right">
+                    <a class="iconfont-home">
+                        <span class="iconfont icon-home"></span>
+                    </a>
+
+                    <a class="iconfont-github" href="https://github.com/hexiongwu1995/" target="_blank">
+                        <span class="iconfont icon-github"></span>
+                    </a>
+
+                    <a class="iconfont-print" href="#">
+                        <span class="iconfont icon-print"></span>
+                    </a>
+                    <span class="iconfont icon-paintbrush"></span>
+                </span>
+
+            </header>
+
+            <article>
+                
+                <h3>A Level 3 heading</h3>
+                <h2>A Level 2 heading</h2>
+                
+                <p>当 <math>
+                        <mi>𝐶</mi>
+                        <mo>&lt;</mo>
                         <mn>0</mn>
-                    </msub>
-                </msubsup>
-                <mrow displaystyle="false">
-                    <mo>(</mo>
-                    <mrow>
-                        <mfrac>
-                            <msub>
-                                <mi>𝜇</mi>
-                                <mn>0</mn>
-                            </msub>
-                            <mn>2</mn>
-                        </mfrac>
-                        <msup>
+                    </math>时，对应的微分方程的通解为：<math>
+                        <mi>𝑋</mi>
+                        <mrow>
+                            <mo>(</mo>
+                            <mi>𝑥</mi>
+                            <mo>)</mo>
+                        </mrow>
+                        <mo>=</mo>
+                        <msub>
+                            <mi>𝐶</mi>
+                            <mn>1</mn>
+                        </msub>
+                        <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">cos</mo>
+                        <mrow>
+                            <mo>(</mo>
                             <mrow>
-                                <mo>(</mo>
-                                <mfrac>
-                                    <mrow>
-                                        <mi>𝜕</mi>
-                                        <mi>𝑦</mi>
-                                    </mrow>
-                                    <mrow>
-                                        <mi>𝜕</mi>
-                                        <mi>𝑡</mi>
-                                    </mrow>
-                                </mfrac>
-                                <mo>)</mo>
+                                <msqrt>
+                                    <mo>−</mo>
+                                    <mi>𝐶</mi>
+                                </msqrt>
+                                <mi>𝑥</mi>
                             </mrow>
-                            <mn>2</mn>
-                        </msup>
+                            <mo>)</mo>
+                        </mrow>
                         <mo>+</mo>
-                        <mfrac>
+                        <msub>
+                            <mi>𝐶</mi>
+                            <mn>2</mn>
+                        </msub>
+                        <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">sin</mo>
+                        <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                                <msqrt>
+                                    <mo>−</mo>
+                                    <mi>𝐶</mi>
+                                </msqrt>
+                                <mi>𝑥</mi>
+                            </mrow>
+                            <mo>)</mo>
+                        </mrow>
+                    </math></p>
+
+
+                <div>
+                    <p>总能量</p>
+                    <math display="block">
+                        <mi>𝐸</mi>
+                        <mrow>
+                            <mo>(</mo>
+                            <mi>𝑡</mi>
+                            <mo>)</mo>
+                        </mrow>
+                        <mo>=</mo>
+                        <msubsup>
+                            <mo form="prefix" lspace="0em" rspace="0em">∫</mo>
+                            <mn>0</mn>
                             <msub>
-                                <mi>𝑇</mi>
+                                <mi>𝐿</mi>
                                 <mn>0</mn>
                             </msub>
-                            <mn>2</mn>
-                        </mfrac>
-                        <msup>
+                        </msubsup>
+                        <mrow displaystyle="false">
+                            <mo>(</mo>
                             <mrow>
-                                <mo>(</mo>
                                 <mfrac>
-                                    <mrow>
-                                        <mi>𝜕</mi>
-                                        <mi>𝑦</mi>
-                                    </mrow>
-                                    <mrow>
-                                        <mi>𝜕</mi>
-                                        <mi>𝑥</mi>
-                                    </mrow>
+                                    <msub>
+                                        <mi>𝜇</mi>
+                                        <mn>0</mn>
+                                    </msub>
+                                    <mn>2</mn>
                                 </mfrac>
-                                <mo>)</mo>
+                                <msup>
+                                    <mrow>
+                                        <mo>(</mo>
+                                        <mfrac>
+                                            <mrow>
+                                                <mi>𝜕</mi>
+                                                <mi>𝑦</mi>
+                                            </mrow>
+                                            <mrow>
+                                                <mi>𝜕</mi>
+                                                <mi>𝑡</mi>
+                                            </mrow>
+                                        </mfrac>
+                                        <mo>)</mo>
+                                    </mrow>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>+</mo>
+                                <mfrac>
+                                    <msub>
+                                        <mi>𝑇</mi>
+                                        <mn>0</mn>
+                                    </msub>
+                                    <mn>2</mn>
+                                </mfrac>
+                                <msup>
+                                    <mrow>
+                                        <mo>(</mo>
+                                        <mfrac>
+                                            <mrow>
+                                                <mi>𝜕</mi>
+                                                <mi>𝑦</mi>
+                                            </mrow>
+                                            <mrow>
+                                                <mi>𝜕</mi>
+                                                <mi>𝑥</mi>
+                                            </mrow>
+                                        </mfrac>
+                                        <mo>)</mo>
+                                    </mrow>
+                                    <mn>2</mn>
+                                </msup>
                             </mrow>
-                            <mn>2</mn>
-                        </msup>
-                    </mrow>
-                    <mo>)</mo>
-                </mrow>
-                <mi displaystyle="false">𝑑</mi>
-                <mi displaystyle="false">𝑥</mi>
-            </math>
-        </div>
-        <p>test</p>
-    </article>
+                            <mo>)</mo>
+                        </mrow>
+                        <mi displaystyle="false">𝑑</mi>
+                        <mi displaystyle="false">𝑥</mi>
+                    </math>
+                </div>
+            </article>
+
+        </main>
+    </div>
 
 </body>
 
