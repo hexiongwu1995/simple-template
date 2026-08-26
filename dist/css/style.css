@@ -97,6 +97,7 @@ body,
 }
 
 aside {
+  position: relative;
   box-sizing: border-box;
   width: var(--aside-width);
   height: 100vh;
@@ -106,11 +107,36 @@ aside {
   transition: all 0.3s ease-in-out;
 }
 
+aside.resizing {
+  transition: none;
+}
+
+
+
 aside.hidden {
   width: 0px;
 }
 
-.doc-name {
+#resize-handle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 4px;
+  height: 100vh;
+  background-color: none;
+}
+
+#resize-handle:hover {
+    background-color: var(--activate-bag);
+    cursor: col-resize;
+}
+
+#resize-handle.resizing {
+  background-color: var(--activate-bag);
+  cursor: col-resize;
+}
+
+.doc.doc-name {
   box-sizing: border-box;
   display: block;
   font-size: 25px;

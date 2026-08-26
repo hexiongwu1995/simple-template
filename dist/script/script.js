@@ -266,3 +266,42 @@ overlay.addEventListener("click", () => {
   aside.classList.remove("show");
   overlay.classList.remove("show");
 });
+
+
+// 侧边栏宽度调整
+const resizeHandle = document.querySelector("#resize-handle");
+
+if (resizeHandle) {
+  let isResizing = false;
+  let startX = 0;
+  let startWidth = 0;
+  const minWidth = 0;
+  const maxWidth = 500;
+
+  resizeHandle.addEventListener("mousedown", (e) => {
+    isResizing = true;
+    startX = e.clientX;
+    const currentWidth = parseInt(getComputedStyle(root).getPropertyValue("--aside-width").trim(), 10);
+    startWidth = currentWidth;
+    resizeHandle.classList.add("resizing");
+    aside.classList.add("resizing");
+    document.body.style.userSelect = "none";
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isResizing) return;
+    const delta = e.clientX - startX;
+    let newWidth = startWidth + delta;
+    if (newWidth < minWidth) newWidth = minWidth;
+    if (newWidth > maxWidth) newWidth = maxWidth;
+    root.style.setProperty("--aside-width", newWidth + "px");
+  });
+
+  document.addEventListener("mouseup", () => {
+    if (!isResizing) return;
+    isResizing = false;
+    resizeHandle.classList.remove("resizing");
+    aside.classList.remove("resizing");
+    document.body.style.userSelect = "";
+  });
+}
