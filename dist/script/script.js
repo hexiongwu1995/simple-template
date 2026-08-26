@@ -7,7 +7,7 @@ const getLevel = (el) => parseInt(el.tagName[1], 10);
 
 // 给每个 heading 生成id、添加numbering和data-original-text属性
 function initHeadings() {
-  headings = Array.from(article.querySelectorAll("h2, h3, h4"));
+  headings = Array.from(article.querySelectorAll("h1,h2, h3, h4"));
   const counters = [];
   if (headings.length > 0) {
     headings.forEach((heading) => {
@@ -266,7 +266,6 @@ overlay.addEventListener("click", () => {
   aside.classList.remove("show");
   overlay.classList.remove("show");
 });
-
 
 // 侧边栏宽度调整
 const resizeHandle = document.querySelector("#resize-handle");

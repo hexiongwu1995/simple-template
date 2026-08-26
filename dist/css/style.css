@@ -313,7 +313,7 @@ article {
   padding: 20px 20px 150px 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   :root {
     --aside-width: 300px;
   }
@@ -413,6 +413,14 @@ p {
   margin: 1em 0em;
 }
 
+/* 标题跳转时留出 header 高度 + 缓冲间距，防止被遮挡 */
+article h1,
+article h2,
+article h3,
+article h4 {
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
 /* math.css */
 
 span.math {
@@ -432,7 +440,7 @@ div.math {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   span.math {
     font-size: 1rem;
   }
