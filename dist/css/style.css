@@ -102,23 +102,18 @@ aside.resizing {
   transition: none;
 }
 
-aside.resizing {
-  transition: none;
-}
-
-
-
 aside.hidden {
   width: 0px;
 }
 
-.doc-name {
-  box-sizing: border-box;
-  display: block;
-  font-size: 25px;
-  font-weight: bold;
-  color: var(--font-color);
-  padding: 10px 20px;
+#resize-handle {
+  position: absolute;
+  /* z-index: 10; */
+  top: 0px;
+  right: 0px;
+  width: 4px;
+  height: 100vh;
+  background-color: none;
 }
 
 #resize-handle:hover {
@@ -314,8 +309,8 @@ article {
   width: 100%;
   height: auto;
   max-width: 800px;
-  margin: 0px auto;
-  padding: 20px 0px 150px 0px;
+  margin: 20px auto;
+  padding: 20px 20px 150px 20px;
 }
 
 @media screen and (max-width: 900px) {
