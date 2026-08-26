@@ -418,7 +418,7 @@ article h1,
 article h2,
 article h3,
 article h4 {
-  scroll-margin-top: calc(var(--header-height) + 20px);
+  scroll-margin-top: calc(var(--header-height) + 2px);
 }
 
 /* math.css */
@@ -474,6 +474,12 @@ table td {
 
 /* theoframe.css */
 
+figure {
+  margin: 20px 10px;
+  scroll-margin-top: calc(var(--header-height) + 20px);
+  overflow: hidden;
+}
+
 .thmbox a {
   color: var(--font-color);
   text-decoration: none;
@@ -482,8 +488,4 @@ table td {
 .thmplain a {
   color: var(--font-color);
   text-decoration: none;
-}
-
-figure {
-  margin: 20px 10px;
 }
