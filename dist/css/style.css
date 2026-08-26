@@ -260,6 +260,11 @@ main.hidden {
   width: 100vw;
 }
 
+main.resizing {
+  transition: none;
+}
+
+
 header {
   position: sticky;
   z-index: 10;

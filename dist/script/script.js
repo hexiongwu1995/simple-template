@@ -284,6 +284,7 @@ if (resizeHandle) {
     startWidth = currentWidth;
     resizeHandle.classList.add("resizing");
     aside.classList.add("resizing");
+    main.classList.add("resizing");
     document.body.style.userSelect = "none";
   });
 
@@ -301,6 +302,7 @@ if (resizeHandle) {
     isResizing = false;
     resizeHandle.classList.remove("resizing");
     aside.classList.remove("resizing");
+    main.classList.remove("resizing");
     document.body.style.userSelect = "";
   });
 }
